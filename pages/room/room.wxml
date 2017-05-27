@@ -1,0 +1,77 @@
+
+<!--room.wxml-->
+<view class="room-view">
+  <view class="hotel-item">
+    <view class="hotel-image">
+      <image class="hotel-avatar" src="{{hotel.image}}"></image>
+    </view>
+    <view class="hotel-content">
+      <view class="item-name">{{hotel.name}}</view>
+      <view class="item-address">{{hotel.address}}</view>
+    </view>
+  </view>
+  <view class="when">
+    <view class="column">
+      <picker mode="date" value="{{date1}}" start="2015-09-01" end="2017-09-01" bindchange="bindDate1Change">
+        <view class="">Check In</view>
+        <view class="picker">
+          {{date1}}
+        </view>
+      </picker>
+    </view>
+    <view class="column">
+      <picker mode="date" value="{{date2}}" start="2015-09-01" end="2017-09-01" bindchange="bindDate2Change">
+        <view class="">Check Out</view>
+        <view class="picker">
+          {{date2}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view hidden="{{roomListHidden}}">
+    <block wx:for="{{rooms}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
+      <view class="room-item">
+        <view class="room-row" style="padding-bottom:20rpx;">
+          <view class="room-name">{{item.name}} Bed</view>
+          <view>
+            <button size="mini" class="bookButton" data-bed="{{item.name}}" bindtap="chooseRoom">Choose</button>
+          </view>
+        </view>
+        <view class="room-row">
+          <view class="room-price1">原价：￥{{item.price}}</view>
+          <view class="room-price2">会员价：￥{{item.price}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view hidden="{{roomDetailHidden}}">
+    <view class="room-item">
+      <view class="room-row" style="padding-bottom:20rpx;">
+          <view class="classname">
+            <image src="/images/{{chooseRoom.name}}.jpg" style="width:220px;height:140px;"></image>
+          </view>
+          <view class="">
+              <button size="mini" bindtap="cancelRoom">Cancel</button>
+          </view>
+      </view>
+      <view class="room-row" style="padding-bottom:20rpx;">
+          <view>Guest: {{nickName}}</view> <view>Mobile: {{mobile}}</view>
+      </view>
+      
+      <view class="room-row" style="padding-bottom:20rpx;">
+        <view class="room-name">{{chooseRoom.name}} Bed</view>
+        <view class="room-price2">会员价：￥{{chooseRoom.price}}</view>
+       
+      </view>
+      <view style="padding: 20rpx;padding-top:40rpx;">
+         <button  class="bookButton" data-bed="{{chooseRoom.name}}" bindtap="bookRoom">Book</button>        
+      </view>
+    </view>
+  </view>
+  <modal title="Login Please" confirm-text="Login" cancel-text="Cancel" hidden="{{modalHidden}}" mask bindconfirm="modalChange" bindcancel="modalCancel" class="modalView">
+    <view>User Name</view>
+    <input bindinput="change1" placeholder="User Name" value="{{nickName}}" class="user-name"></input>
+    <view style="margin-top:30rpx;">Mobile</view>
+    <input bindinput="change2" placeholder="Mobile Number" value="{{mobile}}" class="user-mobile"></input>
+  </modal>
+</view>

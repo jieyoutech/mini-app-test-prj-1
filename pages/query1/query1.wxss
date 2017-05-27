@@ -1,0 +1,39 @@
+.hotel-view{
+    height: 100%;
+}
+
+.hotel-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.hotel-item{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1rpx solid #cccccc;
+    
+}
+
+.hotel-content{
+    flex: 1;
+    margin: 20rpx;
+}
+
+.item-name{
+    font-size: 34rpx;
+    color: black;
+}
+
+.item-address{
+    font-size: 26rpx;
+    color: #666666;
+}
+
+.item-price{
+    font-size: 34rpx;
+    text-align: right;
+    color: #f60;
+    font-family: \5FAE\8F6F\96C5\9ED1,"microsoft yahei";
+}

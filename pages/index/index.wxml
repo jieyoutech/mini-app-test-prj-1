@@ -1,0 +1,34 @@
+
+<!--index.wxml-->
+<view class="index-home">
+  <view class="where">
+    <view class="column">
+      <image src="/images/city4.png" mode="scaleToFill" style="width: 32px; height: 32px;vertical-align:middle;"></image>
+      <text style=""> City</text>
+    </view>
+    <view class="column highlight" catchtap="btnSearch">
+      <image src="/images/nearby.png" mode="scaleToFill" style="width: 32px; height: 32px;"></image>
+      Nearby</view>
+  </view>
+  <view class="when">
+    <view class="column">
+      <picker mode="date" value="{{date1}}" start="2015-09-01" end="2017-09-01" bindchange="bindDate1Change">
+        <view class="">Check In</view>
+        <view class="picker">
+          {{date1}}
+        </view>
+      </picker>
+    </view>
+    <view class="column">
+      <picker mode="date" value="{{date2}}" start="2015-09-01" end="2017-09-01" bindchange="bindDate2Change">
+        <view class="">Check Out</view>
+        <view class="picker">
+          {{date2}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class="search">
+    <button class="searchButton" catchtap="btnSearch">Search</button>
+  </view>
+</view>

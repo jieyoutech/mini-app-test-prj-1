@@ -1,0 +1,97 @@
+.hotel-view{
+    height: 100%;
+}
+
+.hotel-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.hotel-item{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.hotel-content{
+    flex: 1;
+    margin: 20rpx;
+}
+
+.item-name{
+    font-size: 34rpx;
+    color: black;
+}
+
+.item-address{
+    font-size: 26rpx;
+    color: #666666;
+}
+
+.item-price{
+    font-size: 34rpx;
+    text-align: right;
+    color: blue;
+}
+
+.when{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+  margin: 30rpx;
+  padding-bottom: 30rpx;
+  padding-top: 30rpx;
+}
+
+.room-item{
+  
+  border: 1rpx solid #cccccc;
+  margin: 20rpx;
+}
+
+.room-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20rpx;
+}
+
+.room-price1{
+    font-size: 30rpx;
+    color: #666666;
+     text-decoration: line-through;
+     font-family: \5FAE\8F6F\96C5\9ED1,"microsoft yahei";
+}
+
+.room-price2{
+    font-size: 34rpx;
+    color: #f60;
+    font-family: \5FAE\8F6F\96C5\9ED1,"microsoft yahei";
+}
+
+.bookButton{
+  color:#fff;
+  background-color:#59A5F0;
+
+}
+
+.modalView{
+    background-color:#FBF9FE;
+}
+
+.user-name{
+    background-color:#fff;
+    padding:10px 15px;
+    height:1.4rem;
+    color: black;
+}
+
+.user-mobile{
+    background-color:#fff;
+    padding:10px 15px;
+    height:1.4rem;
+    color: black;
+}

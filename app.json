@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my",
+    "pages/query1/query1",
+    "pages/room/room",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#59A5F0",
+    "navigationBarTitleText": "Mini Hotel",
+    "navigationBarTextStyle": "white"
+  },
+   "tabBar": {
+        "selectedColor": "#59A5F0",
+        "backgroundColor": "#fff",
+        "borderStyle": "black",
+        "list": [{
+            "pagePath": "pages/index/index",
+            "text": "Hotel Search",
+            "iconPath": "images/hotel.png",
+            "selectedIconPath": "images/hotel_color.png"
+        }, {
+            "pagePath": "pages/my/my",
+            "text": "My Center",
+            "iconPath": "images/my.png",
+            "selectedIconPath": "images/my_color.png"
+        }]
+    },
+
+    "networkTimeout": {
+        "request": 120000
+    }
+}

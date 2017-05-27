@@ -1,0 +1,69 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.index-home{
+  padding: 20rpx;
+}
+
+.where{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #cccccc;
+  margin: 10rpx;
+  padding: 10rpx;
+  padding-bottom: 30rpx;
+}
+
+.where image{
+  vertical-align:middle;
+  width: 32px; 
+  height: 32px;
+}
+
+.when{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #cccccc;
+  margin: 10rpx;
+  padding: 10rpx;
+  padding-bottom: 30rpx;
+  padding-top: 30rpx;
+}
+
+.search{
+  margin: 10rpx;
+  padding: 10rpx;
+  padding-bottom: 30rpx;
+  padding-top: 30rpx;
+}
+
+.searchButton{
+  color:#fff;
+  background-color:#59A5F0;
+
+}
+
+.highlight{
+  font-weight: bold;
+}

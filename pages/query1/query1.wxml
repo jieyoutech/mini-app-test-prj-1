@@ -1,0 +1,17 @@
+<!--query1.wxml-->
+<scroll-view scroll-y="true" class="hotel-view"  lower-threshold="2"  >
+    <block wx:for="{{hotels}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
+        <view class="hotel-item" catchtap="hotelTap" id="{{item.id}}" 
+                data-name="{{item.name}}" data-address="{{item.address}}" data-image="{{item.image}}">
+            <view class="hotel-image">
+               <image class="hotel-avatar" src="{{item.image}}"></image>
+            </view>
+            <view class="hotel-content">
+               <view class="item-name">{{item.name}}</view>
+               <view class="item-address">{{item.address}}</view>
+               <view class="item-price">￥ {{item.price}}</view>
+            </view>
+        </view>
+    </block>
+</scroll-view>
+
